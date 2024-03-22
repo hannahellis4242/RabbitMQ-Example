@@ -23,5 +23,5 @@ export const listen = async (
     .then((channel) =>
       channel
         .assertQueue(queue)
-        .then(() => channel.consume(queue, (msg) => fn(msg, channel)))
+        .then(() => channel.consume(queue,(msg) => fn(msg, channel)))
     );
